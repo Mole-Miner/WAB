@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 style="text-align: center;">Авторы</h1>
+  <!-- <div class="form-group"  class="sticky-top">
+    <input [(ngModel)]="searchAuthor" name="searchAuthor" type="text" class="form-control"  id="searchAuthor" placeholder="Найти автора">
+  </div> -->
+  <br/>
+  <div *ngIf="authors; else Loadgin">
+    <div *ngFor="let author of authors">
+      <app-author-info [author]='author'></app-author-info>
+      <br/>
+    </div>
+  </div>
+  <ng-template #Loadgin>
+    <div class="container" style="display: flex; flex-direction: row; justify-content: center;">
+      <div class="loadingio-spinner-dual-ring-vgkmbghmoqf"><div class="ldio-h708z95jqg">
+        <div></div><div><div></div></div>
+        </div></div>
+    </div>
+  </ng-template>
+</div>

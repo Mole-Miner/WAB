@@ -1,0 +1,31 @@
+<div class="container">
+  <h1 style="text-align: center;">Жанры</h1>
+  <!-- <div class="form-group" class="sticky-top">
+    <input [(ngModel)]="searchGenre" name="searchGenre" type="text" class="form-control"  id="searchGenre" placeholder="Найти жанр">
+  </div> -->
+  <!-- <div class="form-group">
+    <label for="genreToFind"><h3>Фильтр</h3></label>
+    <select class="custom-select my-1 mr-sm-2" id="genreToFind" [(ngModel)]="genreToFind" name="genreToFind" (change)="setFilter()">
+      <option selected></option>
+      <option *ngFor="let genre of genres">
+        <span>
+          {{ genre.name }};
+        </span>
+      </option>
+    </select>
+  </div> -->
+  <br/>
+  <div *ngIf="genres; else Loadgin">
+    <div *ngFor="let genre of genres">
+      <app-genre-info [genre]='genre'></app-genre-info>
+      <br/>
+    </div>
+  </div>
+  <ng-template #Loadgin>
+    <div class="container" style="display: flex; flex-direction: row; justify-content: center;">
+      <div class="loadingio-spinner-dual-ring-vgkmbghmoqf"><div class="ldio-h708z95jqg">
+        <div></div><div><div></div></div>
+        </div></div>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,48 @@
+<div class="container">
+  <br/>
+  <div class="input-group">
+    <select class="custom-select my-1 mr-sm-2"  aria-label="author" id="author" [(ngModel)]="author" name="author" (change)="setAuthorFilter()">
+      <option selected></option>
+      <option *ngFor="let author of authors">
+        <span>
+          {{ author.lastname }};
+        </span>
+      </option>
+    </select>
+    <div class="alert alert-primary" role="alert">
+      Автор
+    </div>
+  </div>
+
+  <div class="input-group">
+    <select class="custom-select my-1 mr-sm-2"  aria-label="book" id="bookToFind" [(ngModel)]="bookToFind" name="bookToFind" (change)="setBookFilter()">
+      <option selected></option>
+      <option *ngFor="let book of books">
+        <span>
+          {{ book.title }};
+        </span>
+      </option>
+    </select>
+    <div class="alert alert-primary" role="alert">
+      Книга
+    </div>
+  </div>
+
+  <div class="input-group">
+    <select class="custom-select my-1 mr-sm-2"  aria-label="genre" id="genreToFind" [(ngModel)]="genreToFind" name="genreToFind" (change)="setGenreFilter()">
+      <option selected></option>
+      <option *ngFor="let genre of genres">
+        <span>
+          {{ genre.name }};
+        </span>
+      </option>
+    </select>
+    <div class="alert alert-primary" role="alert">
+      Жанр
+    </div>
+  </div>
+</div>
+<app-authors-list></app-authors-list>
+<app-books-list></app-books-list>
+<app-genres-list></app-genres-list>
+

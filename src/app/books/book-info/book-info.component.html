@@ -1,0 +1,13 @@
+<div class="card" *ngIf="book">
+  <div class="card-header">
+    <h3>{{ book.title }}</h3>
+  </div>
+  <div class="card-body">
+    <p><strong>Количество страниц:&nbsp;</strong>{{ book.pages }}</p>
+    <p><strong>Жанр:&nbsp;</strong>{{ book.genre }}</p>
+    <p><strong>Автор:&nbsp;</strong>{{ book.author }}</p>
+    <button (click)="openEditBook()" class="btn btn-primary">Редактировать</button>&nbsp;
+    <button (click)="deleteBook()" class="btn btn-primary">Удалить</button>
+  </div>
+</div>
+

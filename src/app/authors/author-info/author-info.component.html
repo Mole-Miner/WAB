@@ -1,0 +1,17 @@
+<div class="card" *ngIf="author">
+  <div class="card-header">
+    <h3>{{ author.firstname }}&nbsp;{{ author.patronymic }}&nbsp;{{ author.lastname }}</h3>
+  </div>
+  <div class="card-body">
+    <p><strong>Дата рождения:&nbsp;</strong>{{ author.birthday | date: 'mediumDate'}}</p>
+    <strong>Книги:&nbsp;</strong>
+    <ul>
+      <li *ngFor="let book of author.booklist">
+        <!-- { book.name }  &nbsp;-->
+      </li>
+    </ul>
+    <button (click)="openEditAuthor()" class="btn btn-primary">Редактировать</button>&nbsp;
+    <button (click)="deleteAuthor()" class="btn btn-primary">Удалить</button>
+  </div>
+</div>
+

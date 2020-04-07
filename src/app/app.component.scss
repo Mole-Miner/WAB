@@ -1,0 +1,17 @@
+$links-color: white;
+nav {
+  a {
+    color: $links-color;
+  }
+}
+.navbar-nav {
+  a {
+    color: $links-color;
+  }
+}
+.dropdown-menu {
+  a {
+    color: black;
+    font-size: 15pt;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="card" *ngIf="genre">
+  <div class="card-header">
+    <h4>{{ genre.name }}</h4>
+  </div>
+  <div class="card-body">
+    <button (click)="openEditGenre()" class="btn btn-primary">Редактировать</button>&nbsp;
+    <button (click)="deleteGenre()" class="btn btn-primary">Удалить</button>
+  </div>
+</div>
+

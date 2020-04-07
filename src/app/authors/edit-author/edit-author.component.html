@@ -1,0 +1,23 @@
+<div class="container">
+  <form (ngSubmit)="validateForm()" name="authorForm">
+    <h2>Редактирование автора</h2>
+    <div class="form-group">
+      <label for="firstname">Имя</label>
+      <input type="text" id="firstname" class="form-control" [(ngModel)]="author.firstname" name="firstname">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Фамилия</label>
+      <input type="text" id="lastname" class="form-control" [(ngModel)]="author.lastname" name="lastname">
+    </div>
+    <div class="form-group">
+      <label for="patronymic">Отчество</label>
+      <input type="text" id="patronymic" class="form-control" [(ngModel)]="author.patronymic" name="patronymic">
+    </div>
+    <div class="form-group">
+      <label for="birthday">Дата рождения</label>
+      <input type="date" id="birthday" class="form-control" [(ngModel)]="author.birthday" name="birthday">
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>&nbsp;
+    <button (click)="goBack()"class="btn btn-primary">Отменить</button>
+  </form>
+</div>

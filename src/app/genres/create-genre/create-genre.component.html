@@ -1,0 +1,15 @@
+<div class="container">
+  <form (ngSubmit)="validateForm()" name="genreForm">
+    <h2>Новый жанр</h2>
+    <div class="form-group">
+      <label for="name">Название</label>
+      <input type="text" id="name" class="form-control" [(ngModel)]="genre.name" name="name">
+    </div>
+    <!-- <button (click)="validateForm()" class="btn btn-primary">Добавить</button> -->
+    <button type="submit" class="btn btn-primary">Добавить</button>&nbsp;
+    <button (click)="goBack()"class="btn btn-primary">Отменить</button>
+  </form>
+</div>
+
+
+
